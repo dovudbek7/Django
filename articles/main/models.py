@@ -5,15 +5,15 @@ from django.db import models
 # class bu DB da jadval
 # class atrrlari bu jadval ustunlari 
  
-class Category(models.Model):
-    name = models.CharField(verbose_name='Turkum nomi',max_length=50)
+class Comment(models.Model):
+    name = models.CharField(verbose_name='author',max_length=50)
     
     
     def __str__(self) -> str:
         return str(self.name)
 
  
-class Review(models.Model):
+class Category(models.Model):
     name = models.CharField(verbose_name='Foydalanuvchi ismi',max_length=100)
     comment = models.TextField()
     
@@ -22,7 +22,7 @@ class Review(models.Model):
         return str(self.name)
     
 
-class Product(models.Model):
+class Article(models.Model):
     name = models.CharField('Tovar nomi',max_length=100)
     published_date = models.DateTimeField(auto_now_add=True)
     author = models.CharField(max_length=100)
