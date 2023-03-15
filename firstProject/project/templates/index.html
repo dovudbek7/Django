@@ -33,5 +33,46 @@
     <div class="container d-flex justify-content-center border shadow my-5 p-5">
         <h1 class="text-primary">Hello World</h1>
     </div>
+    <div class="row">
+        <div class="col-3">
+            {% include 'components/categories.html' %}
+        </div>
+        <div class="col-9">
+            <div class="p-3 my-5">
+                <ul>
+                    {% for category in categories%}
+                    <li>{{category.name}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="p-3 my-5">
+                <ul>
+                    {% for category in categories%}
+                    <li>{{category.name}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+{%endblock%}
+{% extend 'wrapper.html' %}
+
+{% block content %}
+    <main class="container">
+        <center class="my-5">
+            <h2>Hello</h2>
+        </center>
+        <div class="row">
+            <div class="col-3">
+                {% include 'components/categories.html' %}
+            </div>
+            <div class="col-9">
+                <center>
+                    <h2>Hello - col-9</h2>
+                </center>
+            </div>
+        </div>
+    </main>
+{% endblock %}
