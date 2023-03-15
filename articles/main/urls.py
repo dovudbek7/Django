@@ -5,5 +5,5 @@ app_name = 'main'
 
 urlpatterns = [
     path("", views.homePageView, name='home'),
-    path("all/", views.qurutsPageView, name='all'),
+    path("contact/", views.qurutsPageView, name='contact'),
 ]
