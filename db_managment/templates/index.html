@@ -16,6 +16,18 @@
                     <input type="submit">
                 </form>
             </div>
+            <div class="my">
+                {% if massage%}
+                <h3>{{massage}}</h3>
+                {% endif%}
+                <ul>
+                {% for obj in object_list%}
+                <li>
+                    {{obj.name}} , {{obj.age}}
+                </li>
+                {% endfor%}
+                </ul>
+            </div>
         </div>
     </main>
 
