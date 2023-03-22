@@ -78,6 +78,7 @@ def testView(request):
     data = {
         'object':None
     }
+    
     return render(request, "index.html", context=data)
 
 
@@ -85,6 +86,10 @@ def search(request):
     if request.method == "GET":
         query = request.GET.get('q')
         data = Student.objects.filter(name__icontains=query)
+        # data = Student.objects.filter(age_lt=int(query)) # lt - dan kichik
+        # data = Student.objects.filter(age_lte=int(query)) # - lte ga teng yoki kichik
+        # data = Student.objects.filter(age_gt=int(query)) # - dan katta
+        # data = Student.objects.filter(age_gte=int(query)) # - gte ga teng yoki katta
         if data:
             return render(request, 'index.html', context={'object_list':data})
         else:

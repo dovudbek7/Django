@@ -9,6 +9,14 @@
 <body>
     <main>
         <div class="container">
+            <h3>Stacks</h3>
+            <ul>
+                {% for stack in stacks%}
+                    <li>{{stacks.name}} * </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="container">
             <div class="my">
                 <h3>search objects...</h3>
                 <form action="{% url 'main_app:search' %}" method="get">
