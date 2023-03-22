@@ -71,12 +71,15 @@ def testView(request):
 
     # one_item = Course.objects.get(id=1)
     # print(one_item)
+    #  = Course.objects.all()
     
-    object_list = Student.objects.filter()
+    # object_list = Student.objects.filter()
     # print(object_list)
-    
+    course = Course.objects.all()
     data = {
-        'object':None
+        # 'object':None,
+        "stacks":stacks,
+        "courses":course
     }
     
     return render(request, "index.html", context=data)
@@ -94,3 +97,5 @@ def search(request):
             return render(request, 'index.html', context={'object_list':data})
         else:
             return render(request, 'index.html', context={"message":"not found"})
+        
+        

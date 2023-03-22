@@ -9,6 +9,26 @@
 <body>
     <main>
         <div class="container">
+            <h3>Courses</h3>
+           <h4>Add new courses</h4>
+           <form action="" method="POST">
+            <p>
+                <input type="text" name="name" placeholder="Name">
+                <input type="submit" >
+            </p>
+           </form>
+        </div>
+        <div class="container">
+            <h3>Stacks</h3>
+            <ul>
+                {% for course in courses%}
+                    <li>
+                        {{course.name}} *
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="container">
             <h3>Stacks</h3>
             <ul>
                 {% for stack in stacks%}
