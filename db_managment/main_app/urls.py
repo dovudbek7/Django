@@ -7,4 +7,3 @@ urlpatterns = [
     path('', views.testView, name='test'),
     path('search', views.search, name='search')
 ]
-
