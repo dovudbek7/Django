@@ -4,7 +4,7 @@ from django.contrib import messages
 
 from .models import *
 from .utils import check_article_view
-
+from .forms import *
 # Create your views here.
 def all_articles_view(request):
     # request.session.clear()
